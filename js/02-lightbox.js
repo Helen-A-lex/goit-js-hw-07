@@ -16,16 +16,6 @@ const markup = galleryItems
 const galleryContainer = document.querySelector(".gallery");
 
 galleryContainer.insertAdjacentHTML("beforeend", markup);
-galleryContainer.addEventListener("click", onGalleryContainerClick);
-
-function onGalleryContainerClick(evt) {
-  evt.preventDefault();
-  const image = evt.target;
-  if (!image.classList.contains("gallery__image")) {
-    return;
-  }
-  console.log(image);
-}
 
 const lightbox = new SimpleLightbox(".gallery__link", {
   captionsData: "alt",
