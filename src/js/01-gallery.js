@@ -16,7 +16,7 @@ const markup = galleryItems
   })
   .join("");
 const galleryContainer = document.querySelector(".gallery");
-console.log(galleryContainer);
+
 galleryContainer.insertAdjacentHTML("beforeend", markup);
 galleryContainer.addEventListener("click", onGalleryContainerClick);
 
@@ -34,7 +34,7 @@ function onGalleryContainerClick(evt) {
   );
 
   function onEscKeyPress(evt) {
-    console.log(evt.code);
+   
     const isKeyCodeEscape = evt.code === "Escape";
     if (isKeyCodeEscape) {
       instance.close();
