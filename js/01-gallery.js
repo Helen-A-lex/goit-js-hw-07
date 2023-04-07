@@ -34,7 +34,6 @@ function onGalleryContainerClick(evt) {
   );
 
   function onEscKeyPress(evt) {
-   
     const isKeyCodeEscape = evt.code === "Escape";
     if (isKeyCodeEscape) {
       instance.close();
@@ -54,6 +53,24 @@ function onGalleryContainerClick(evt) {
       },
     }
   );
+
+  //   Щоб працювало прям правильно, бо в тому випадку прослуховувач не знімався,
+  // якщо закривали не ескейпом, а просто хрестиком модалки
+  // function onEscKeyPress(evt) {
+  //
+  //     if (evt.code === "Escape") {
+  //       this.close();
+  //     }
+  // }
+  // {hadler: null;
+  //   onShow (instance)  {
+  // this.handler = closeModal.bind(instance)
+  //     document.addEventListener("keydown", this.handler);
+  //   },
+  //   onClose: (instance) {
+  //     document.removeEventListener("keydown", this.handler);
+  //   },
+  // }
 
   instance.show();
 }
